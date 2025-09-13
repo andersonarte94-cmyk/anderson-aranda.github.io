@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>No Life Matters — Anderson Aranda</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@6/babel.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-gray-100 m-0 p-0">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const App = () => {
+      const [currentSection, setCurrentSection] = React.useState('intro');
+
+      const article = {
+        title: "No Life Matters",
+        subtitle: "Nos preocupamos más por la pureza moral e ideológica y financiera de nuestras ideologías y estrategias, y la recaudación de fondos y los líderes y las organizaciones. —Ibram X. Kendi",
+        author: "Anderson Aranda",
+        date: "15 de junio de 2024",
+        content: [
+          {
+            section: "intro",
+            text: "urante un tiempo viví atrapado bajo el lema de Black Lives Matter, buscando ser merecedor —como muchos otros negros— de una justicia racial en nombre de un «hermano» al que jamás conocí. Que George Floyd fuera negro parecía, para muchos, razón suficiente para sostener la existencia de una supremacía blanca dedicada —según la palabra de algunos activistas, incluso peruanos— a exterminarnos. En el Perú, a raíz de aquel suceso, vi surgir diversas organizaciones que se autodenominaban «afrodescendientes», erigiéndose en portavoces de quienes, según ellas, carecen de una propia representación; en defensores de aquellos «indefensos» que necesitan ser hablados por otros."
+          },
+          {
+            section: "development1",
+            text: "Con el tiempo, empecé a asumir mayor responsabilidad conmigo mismo y con la información que consumía. Decidí ir más allá de lo que los medios hegemónicos dictaban como narrativa aceptable y descubrí que no estaban siendo del todo honestos. Ahí estaban los casos de hombres blancos como Tony Timpa, de 32 años, quien murió en Dallas en 2016 tras ser asfixiado por la policía mientras los agentes se burlaban de él. No hubo «disturbios». Otro fue el de Zachary Hammond, un adolescente de 19 años, desarmado, abatido durante una operación antidrogas pese a que una autopsia independiente demostró que recibió disparos por la espalda. Y está también el caso de Justine Damond, una mujer blanca australiana-estadounidense que, tras llamar al 911 en 2017 para reportar un posible asalto en Minneapolis, fue fatalmente disparada por el oficial Mohamed Noor cuando se acercó a la patrulla. Ninguno de estos episodios generó el mismo «nivel de protesta» ni la misma centralidad mediática. Todos compartían un rasgo común: eran blancos."
+          },
+          {
+            section: "development2",
+            text: "Iryna Zarutska, una refugiada ucraniana de 23 años que había huido de la guerra, fue brutalmente apuñalada sin provocación el 22 de agosto de 2025 mientras viajaba en un tren ligero en Charlotte, Carolina del Norte. El atacante, Decarlos Brown Jr., un hombre con antecedentes criminales y problemas de salud mental, fue arrestado y enfrenta cargos estatales de asesinato en primer grado, además de cargos federales que podrían derivar en la pena de muerte. El hecho llamativo es que Brown es un hombre negro. Y ese detalle, lejos de ser anecdótico, plantea preguntas incómodas: si la vida de los negros importa, ¿por qué el movimiento guarda silencio frente a la conducta ominosa de este individuo? ¿Cómo explicar que, en la práctica, la vida de los blancos parece no importar? Y más aún, ¿cómo es que organizaciones como «Ashanti Perú», «ASONEDH», el Programa «Afro-Peruvian and Indigenous Communities (APIC)» o iniciativas como «Afrocentro» son capaces de esquivar por completo el tema?"
+          },
+          {
+            section: "development3",
+            text: "John McWhorter propone un principio sencillo: nadie quiere ser llamado racista. La teoría crítica de la raza se ha implantado hasta el punto de que el reconocimiento de la verdad termina diluyéndose bajo una supuesta «doble carga». Cuando los movimientos raciales sostienen que las vidas negras importan más que otras, lo que en el fondo expresan es lo siguiente: como el racismo sería el principio organizador de toda sociedad —aunque en realidad no puede explicarlo todo—, la persona blanca es vista como cómplice y artífice de ese problema estructural, mientras que los negros cargarían con una experiencia bifronte de racismo permanente y con la sensibilidad histórica que este arrastra."
+          },
+          {
+            section: "development4",
+            text: "Ser etiquetado como racista es análogo a ser llamado pedófilo: la simple negación del cargo suele interpretarse como confirmación. De ahí que el poder resida en dos polos: la culpabilidad blanca y la inferioridad negra. Para evitar semejante asignación, los medios, las figuras públicas y los aparatos políticos prefieren tolerar una disonancia cognitiva antes que arriesgarse a ser descubiertos como intolerantes a la «verdad». Esa mirada, de tinte orwelliano, implanta un miedo racial que produce un paradójico resultado: la muerte de un blanco no es equiparable a la de un negro, porque bajo este paradigma la vida de un negro vale, al mismo tiempo, más y menos."
+          },
+          {
+            section: "development5",
+            text: "El antirracismo de tercera ola —o, más precisamente, el neorracismo— obliga al blanco a despreciarse de manera permanente por un supuesto «privilegio» que, en muchos casos, carece de sentido. Al mismo tiempo, si eres negro, la exigencia es adoptar el disfraz de «víctima» de una vida de opresión constante. En este marco, Iryna Zarutska, por el simple hecho de cargar con ese sesgo racial, queda excluida de la justicia racial: no merece, a los ojos de este paradigma, un perdón multitudinario, porque era, después de todo, una privilegiada blanca."
+          },
+          {
+            section: "development6",
+            text: "Aquí conviene adoptar dos miradas críticas sobre las ONGs que han guardado silencio frente a este atentado contra una persona con dignidad. Por un lado, está su silencio cobarde ante un asesinato perpetrado por un hombre negro; por el otro, un silencio igualmente conveniente, que les permite invisibilizar los financiamientos que reciben y que rara vez se traducen en beneficios para las minorías o en soluciones a problemas reales. En 2020, la Black Lives Matter Global Network Foundation recibió cerca de 90 millones de dólares en donaciones. Un año después destinó casi 6 millones a la compra de una mansión en Studio City, presentada como «centro cultural». Todo esto mientras acumulaba retrasos en sus reportes financieros y enfrentaba sanciones en estados como California y Washington. Un recordatorio de que el activismo moral puede volverse indistinguible de una corporación opaca."
+          },
+          {
+            section: "development7",
+            text: "En el caso del Perú, el panorama no es tan distinto: hubo un destape informativo sobre ONGs que reciben financiamiento externo. «ASHANTI Perú» —según lo reconoce en su propio sitio web— ha recibido apoyo directo de USAID, la agencia estadounidense de cooperación internacional. Se presenta como representante de la población mal llamada «afroperuana» bajo la etiqueta de los «más vulnerables». Pero lejos de atacar la raíz de las disparidades, promueve agendas interseccionales —la teoría de la relacionalidad entre raza y agendas LGTB— alineadas con objetivos internacionales y orientadas a impulsar políticas públicas que, en la práctica, terminan beneficiando a una élite negra con ideas marxistas."
+          },
+          {
+            section: "development8",
+            text: "Son organizaciones que, bajo la bandera del antirracismo, siembran en las conciencias un sectarismo casi religioso. Se presentan como guardianes de una verdad incuestionable y, al mismo tiempo, como los encargados de que los negros no puedan pensar por sí mismos. Así, sostendrán que en Estados Unidos un negro mata a otro negro porque ambos viven atrapados en una estructura racista; que un hombre negro puede asesinar a una mujer blanca porque su vida estuvo marcada por el sufrimiento racial; o que es más urgente descolonizar la marca de una mazamorra llamada Negrita que hacer justicia ante el asesinato de un blanco. Como escribió Kierkegaard: la inocencia no es otra cosa que ignorancia."
+          },
+          {
+            section: "conclusion",
+            text: "En lo que a mí respecta, desde que hablo de estos temas los neorracistas me llaman «Tío Tom» o «negro de casa». Les incomoda que alguien con una formación honesta les recuerde que tratan a las personas según el color de su piel, o peor aún, que celebran la muerte de un negro cuando les permite hacer política. Sí, la celebran. Son, en realidad, los más racistas que pueden existir: los nuevos segregacionistas dentro de su propio grupo. Y lo son porque su compromiso con la igualdad es insincero; se desvanece en cuanto los resultados trágicos afectan a personas de todos los colores. Desde luego, el racismo inverso «no existe»."
+          },
+          {
+            section: "closing",
+            text: "Todavía conservo la esperanza de que estos casos alcancen un mayor impacto y nos ayuden a comprender que la maldad no responde a una identidad melánica. También espero que nos permitan, a los negros, liberarnos de la inferioridad implantada por una ideología, asumir nuestras responsabilidades, compadecernos y, sobre todo, empezar a hablar de los asuntos serios. Y por qué no, exigir a estas organizaciones que dejen de utilizarnos. Ya bastante tienen con ser cobardes. Que empiecen, de una vez, a mostrarse como lo que realmente son: no víctimas de un racismo omnipresente, sino promotores de la idea de que debemos creerlo."
+          }
+        ]
+      };
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+          {/* CABECERA LIMPIA — SIN IMAGEN */}
+          <div className="flex flex-col items-center justify-center py-20 px-6 text-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-2 leading-tight">
+              {article.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 italic mb-6">
+              {article.subtitle}
+            </p>
+            <div className="flex items-center justify-center text-gray-500 text-sm md:text-base">
+              <span className="font-medium">{article.author}</span>
+              <span className="mx-2">•</span>
+              <span>{article.date}</span>
+            </div>
+          </div>
+
+          {/* ESPACIO DE SEPARACIÓN */}
+          <div className="w-full h-16 bg-slate-50"></div>
+
+          {/* ARTÍCULO */}
+          <div className="max-w-4xl mx-auto px-6 py-12">
+            {/* Primer párrafo con drop cap elegante */}
+            {article.content.map((section, index) => (
+              <div key={index} className="transition-all duration-300 animate-fadeIn mb-8">
+                {index === 0 ? (
+                  <div className="relative">
+                    <span className="absolute left-0 top-0 text-5xl md:text-6xl lg:text-7xl font-bold text-amber-800 leading-none opacity-90 -ml-2 -mt-1">
+                      D
+                    </span>
+                    <p className="text-lg pt-1 pl-8" style={{ textIndent: '0', lineHeight: '1.6' }}>
+                      {section.text}
+                    </p>
+                  </div>
+                ) : (
+                  <p className="text-lg">{section.text}</p>
+                )}
+              </div>
+            ))}
+
+            {/* Footer Reflection */}
+            <div className="mt-16 border-t border-gray-200 pt-12 text-center">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+                <p className="text-gray-700 text-lg italic">
+                  Este artículo no es un grito. Es un interrogante.  
+                  Y tal vez, por eso, incomoda tanto.
+                </p>
+                <p className="text-gray-600 mt-4">
+                  Si lo leíste hasta el final, no porque te gustó, sino porque te hizo pensar,  
+                  entonces ya has ganado algo que ninguna organización puede comprar: tu libertad intelectual.
+                </p>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="mt-12 flex justify-center space-x-4 flex-wrap">
+              {['intro', 'development1', 'development2', 'development3', 'development4', 'development5', 'development6', 'development7', 'development8', 'conclusion', 'closing'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => setCurrentSection(section)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    currentSection === section
+                      ? 'bg-red-600 text-white shadow-md'
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {section === 'intro' && 'Introducción'}
+                  {section === 'development1' && 'La mentira mediática'}
+                  {section === 'development2' && 'La víctima olvidada'}
+                  {section === 'development3' && 'La doble carga'}
+                  {section === 'development4' && 'Culpabilidad ritual'}
+                  {section === 'development5' && 'El nuevo apartheid'}
+                  {section === 'development6' && 'El negocio del activismo'}
+                  {section === 'development7' && 'USAID y Ashanti'}
+                  {section === 'development8' && 'La religión del antirracismo'}
+                  {section === 'conclusion' && 'Conclusión'}
+                  {section === 'closing' && 'La liberación'}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile note */}
+            <div className="mt-12 text-center text-sm text-gray-500">
+              <p>Este ensayo fue escrito con sangre, memoria y coraje.  
+                No para complacer. Para despertar.</p>
+            </div>
+          </div>
+
+          <style jsx>{`
+            @keyframes fadeIn {
+              from { opacity: 0; transform: translateY(20px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fadeIn {
+              animation: fadeIn 0.6s ease-out forwards;
+            }
+          `}</style>
+        </div>
+      );
+    };
+
+    const root = document.getElementById('root');
+    ReactDOM.render(<App />, root);
+  </script>
+</body>
+</html>
